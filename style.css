@@ -26,24 +26,26 @@ padding:70px 20px;
 h1{font-size:38px;}
 h2{font-size:30px;}
 
-.cta{
-display:block;
-width:300px;
-margin:40px auto;
-background:#ff7a00;
-color:white;
-text-align:center;
-padding:18px;
-font-size:20px;
-text-decoration:none;
-border-radius:8px;
-}
+ul{padding-left:20px;}
 
 .quote{
 background:#f4f4f4;
 padding:20px;
 margin:20px 0;
 border-left:5px solid #1b75d1;
+}
+
+.cta{
+display:block;
+width:260px;
+margin:40px auto;
+background:#ff7a00;
+color:white;
+text-align:center;
+padding:18px;
+font-size:18px;
+text-decoration:none;
+border-radius:8px;
 }
 
 .progress-bar{
@@ -54,4 +56,32 @@ height:6px;
 background:#ff7a00;
 width:0%;
 z-index:999;
+}
+
+.faq-btn{
+width:100%;
+padding:15px;
+background:#eee;
+border:none;
+text-align:left;
+font-size:18px;
+margin-top:10px;
+cursor:pointer;
+}
+
+.faq-content{
+display:none;
+padding:10px;
+background:white;
+}
+
+.popup{
+position:fixed;
+bottom:20px;
+left:20px;
+background:white;
+padding:15px;
+border-radius:8px;
+box-shadow:0 0 10px rgba(0,0,0,0.2);
+display:none;
 }
