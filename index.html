@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
 
 <meta charset="UTF-8">
@@ -10,37 +11,42 @@
 <script src="https://cdn.tailwindcss.com"></script>
 
 <style>
-body{
-font-family:Arial;
-background:#f9f7f2;
-margin:0;
+
+:root{
+--primary-green:#2d5a27;
+--accent-yellow:#f4b400;
+--bg-cream:#f9f7f2;
 }
 
-.btn{
-background:#f4b400;
+.btn-cta{
+background:var(--accent-yellow);
 color:#000;
-padding:15px 25px;
-border-radius:8px;
 font-weight:bold;
-text-decoration:none;
-display:inline-block;
+border-radius:8px;
 transition:.3s;
 }
 
-.btn:hover{
+.btn-cta:hover{
 transform:scale(1.05);
+background:#e0a300;
 }
 
-.topbar{
-position:fixed;
-top:0;
-width:100%;
-background:#ff3b30;
-color:#fff;
-text-align:center;
-padding:10px;
-font-weight:bold;
-z-index:9999;
+@keyframes pulseCTA{
+0%{transform:scale(1);}
+50%{transform:scale(1.07);}
+100%{transform:scale(1);}
+}
+
+.btn-cta{
+animation:pulseCTA 1.8s infinite;
+}
+
+body{
+font-family:'Inter',sans-serif;
+background:var(--bg-cream);
+padding-top:60px;
+font-size:18px;
+line-height:1.7;
 }
 </style>
 
@@ -48,97 +54,141 @@ z-index:9999;
 
 <body>
 
-<div class="topbar">
-🔥 <span id="buyers">1.184</span> pessoas acessaram hoje • Restam <span id="spots">17</span> acessos
+<!-- BARRA -->
+
+<div style="position:fixed;top:0;left:0;width:100%;background:#ff3b30;color:white;text-align:center;padding:10px;font-weight:bold;z-index:9999;">
+🔥 <span id="buyersCount">1.247</span> mulheres acessaram o treino este mês • Restam <span id="spots">23</span> acessos!
 </div>
 
-<section style="padding:120px 20px;text-align:center;background:#111827;color:white;">
+<!-- HERO -->
 
-<h1 style="font-size:38px;max-width:700px;margin:auto;">
-🔥 Seu bumbum não cresce e sua barriga não define?
+<section class="text-white py-10 px-6" style="background:#111827;">
+
+<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
+
+<div class="md:w-1/2">
+
+<h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
+<span class="text-yellow-300">ATENÇÃO:</span> Seu bumbum não cresce e sua barriga não define?
 </h1>
 
-<p style="margin-top:15px;font-size:18px;">
-Juliana também se sentia assim… mesmo tentando treinar, o corpo não respondia.
+<p class="text-xl text-gray-300 mb-6">
+Juliana se sentia exatamente assim... mesmo tentando treinar, nada mudava no corpo dela.
 </p>
 
-<a href="#" class="btn" style="margin-top:25px;">
-QUERO TRANSFORMAR MEU CORPO
+<p class="text-lg mb-10">
+Até descobrir um método simples que ativa o glúteo e define o abdômen em casa.
+</p>
+
+<a href="#" class="btn-cta px-10 py-4 text-xl inline-block">
+QUERO TRANSFORMAR MEU CORPO AGORA
 </a>
 
-<div style="margin-top:40px;">
-<img src="images/hero-mulher.jpg" width="300">
+</div>
+
+<div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
+<img src="images/hero-mulher.jpg" class="rounded-lg shadow-2xl w-[400px]">
 </div>
 
 </section>
 
-<section style="padding:60px 20px;text-align:center;">
+<!-- VÍDEO -->
 
-<h2 style="font-size:28px;">
-Veja como Juliana mudou o corpo dela
+<section class="py-16 px-6 bg-white">
+
+<div class="max-w-3xl mx-auto text-center">
+
+<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+Veja como Juliana transformou o corpo dela
 </h2>
 
-<div style="margin-top:30px;">
-<img src="images/thumb-video.jpg" width="400">
+<img src="images/thumb-video.jpg" class="w-full rounded-xl shadow-xl">
+
 </div>
 
 </section>
 
-<section style="padding:60px 20px;background:#fff;text-align:center;">
+<!-- HISTÓRIA -->
 
-<h2>Juliana se identificava com isso:</h2>
+<section class="py-20 px-6 bg-[#f6f2ea]">
 
-<p>✔ Bumbum sem volume e flácido</p>
-<p>✔ Barriga que não definia</p>
-<p>✔ Treinos que não davam resultado</p>
-<p>✔ Falta de tempo para academia</p>
+<div class="max-w-4xl mx-auto">
 
-</section>
+<h2 class="text-4xl mb-6">A história da Juliana</h2>
 
-<section style="padding:60px 20px;text-align:center;">
-
-<h2>A virada da Juliana</h2>
-
-<p>
-Depois de tentar de tudo, Juliana encontrou um método simples que ativa o glúteo e define o abdômen em casa.
+<p class="mb-4">
+Juliana, 29 anos, evitava até tirar fotos. O bumbum não crescia e a barriga parecia sempre inchada.
 </p>
 
-<img src="images/app-mockup.png" width="400">
+<p class="mb-4">
+Ela tentou academia, vídeos e dietas… mas nada parecia funcionar.
+</p>
+
+<div class="border-l-4 border-orange-400 pl-4 italic">
+“Eu treinava e parecia que meu corpo não respondia.”
+</div>
+
+</div>
 
 </section>
 
-<section style="padding:60px 20px;background:#fff;text-align:center;">
+<!-- PROBLEMAS -->
 
-<h2>O que fez a diferença para Juliana</h2>
+<section class="py-16 px-6 bg-white text-center">
 
-<p>✔ Treinos focados em crescimento do bumbum</p>
-<p>✔ Exercícios que ativam o abdômen corretamente</p>
-<p>✔ Sequência pronta sem precisar pensar</p>
-<p>✔ Apenas 15 minutos por dia</p>
+<h2 class="text-3xl mb-8">Ela sofria com:</h2>
+
+<p>✔ Bumbum sem volume</p>
+<p>✔ Barriga que não define</p>
+<p>✔ Treinos sem resultado</p>
+<p>✔ Falta de tempo</p>
 
 </section>
 
-<section style="padding:60px 20px;text-align:center;">
+<!-- SOLUÇÃO -->
 
-<h2>Oferta Especial</h2>
+<section class="py-20 px-6 bg-[#00CEC8] text-center">
 
-<h1 style="font-size:40px;">R$27</h1>
+<h2 class="text-4xl mb-6">A virada</h2>
 
-<p>Acesso imediato ao método que mudou o corpo da Juliana</p>
+<p>
+Juliana encontrou o método <strong>Bumbum na Grécia + Shape na Trinca</strong>.
+</p>
 
-<a href="#" class="btn">
+<p>
+Treinos simples, rápidos e focados no resultado.
+</p>
+
+</section>
+
+<!-- PRODUTO -->
+
+<section class="py-20 px-6 bg-white text-center">
+
+<h2 class="text-4xl mb-8">O que você recebe</h2>
+
+<p>✔ Treinos de bumbum</p>
+<p>✔ Treinos de abdômen</p>
+<p>✔ Plano semanal</p>
+<p>✔ 15 minutos por dia</p>
+
+<img src="images/app-mockup.png" class="w-[400px] mx-auto mt-6">
+
+</section>
+
+<!-- OFERTA -->
+
+<section class="py-20 px-6 text-center">
+
+<h2 class="text-3xl mb-4">Oferta Especial</h2>
+
+<h1 class="text-5xl font-bold mb-4">R$27</h1>
+
+<p>Acesso imediato</p>
+
+<a href="#" class="btn-cta px-10 py-4 text-xl mt-6 inline-block">
 COMPRAR AGORA
 </a>
-
-</section>
-
-<section style="padding:60px 20px;background:#fff;text-align:center;">
-
-<h2>Comentários</h2>
-
-<div id="comments"></div>
-
-<button onclick="loadMore()">Ver mais</button>
 
 </section>
 
@@ -149,41 +199,9 @@ COMPRAR AGORA
 setInterval(()=>{
 let el=document.getElementById("spots")
 let num=parseInt(el.innerText)
-if(num>5){num--}
+if(num>7){num--}
 el.innerText=num
-},20000)
-
-/* POPUP */
-
-setInterval(()=>{
-alert("🔥 Alguém acabou de começar o treino!")
-},30000)
-
-/* COMENTÁRIOS */
-
-let data=[
-"A Juliana tinha razão… esse treino ativa mesmo",
-"Comecei e já senti diferença no bumbum",
-"Treino rápido e muito prático",
-"Vale muito a pena"
-]
-
-let visible=2
-
-function render(){
-let html=""
-for(let i=0;i<visible;i++){
-html+="<p>"+data[i%data.length]+"</p>"
-}
-document.getElementById("comments").innerHTML=html
-}
-
-function loadMore(){
-visible+=2
-render()
-}
-
-render()
+},25000)
 
 </script>
 
