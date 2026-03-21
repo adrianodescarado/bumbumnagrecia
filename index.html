@@ -1,206 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Bumbum na Grécia + Shape na Trinca</title>
+
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+body{
+font-family:Arial;
+background:#f9f7f2;
+margin:0;
+}
+
+.btn{
+background:#f4b400;
+color:#000;
+padding:15px 25px;
+border-radius:8px;
+font-weight:bold;
+text-decoration:none;
+display:inline-block;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+.topbar{
+position:fixed;
+top:0;
+width:100%;
+background:#ff3b30;
+color:#fff;
+text-align:center;
+padding:10px;
+font-weight:bold;
+z-index:9999;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="topbar">
+🔥 <span id="buyers">1.184</span> pessoas acessaram hoje • Restam <span id="spots">17</span> acessos
+</div>
+
+<section style="padding:120px 20px;text-align:center;background:#111827;color:white;">
+
+<h1 style="font-size:38px;max-width:700px;margin:auto;">
+🔥 Seu bumbum não cresce e sua barriga não define?
+</h1>
+
+<p style="margin-top:15px;font-size:18px;">
+Existe um método simples que ativa o glúteo e define o abdômen treinando em casa.
+</p>
+
+<a href="#" class="btn" style="margin-top:25px;">
+QUERO TRANSFORMAR MEU CORPO
+</a>
+
+<div style="margin-top:40px;">
+<img src="images/hero-mulher.jpg" width="300">
+</div>
+
+</section>
+
+<section style="padding:60px 20px;text-align:center;">
+
+<h2 style="font-size:28px;">
+Veja como funciona o aplicativo
+</h2>
+
+<div style="margin-top:30px;">
+<img src="images/thumb-video.jpg" width="400">
+</div>
+
+</section>
+
+<section style="padding:60px 20px;background:#fff;text-align:center;">
+
+<h2>Você se identifica com isso?</h2>
+
+<p>✔ Bumbum pequeno ou flácido</p>
+<p>✔ Barriga que não define</p>
+<p>✔ Treinos que não funcionam</p>
+<p>✔ Falta de tempo</p>
+
+</section>
+
+<section style="padding:60px 20px;text-align:center;">
+
+<h2>Conheça o método</h2>
+
+<p>
+Treinos simples, rápidos e feitos para ativar o crescimento do bumbum e definir o abdômen.
+</p>
+
+<img src="images/app-mockup.png" width="400">
+
+</section>
+
+<section style="padding:60px 20px;background:#fff;text-align:center;">
+
+<h2>O que você recebe</h2>
+
+<p>✔ Treinos de bumbum</p>
+<p>✔ Treinos de abdômen</p>
+<p>✔ Plano semanal pronto</p>
+<p>✔ Apenas 15 minutos por dia</p>
+
+</section>
+
+<section style="padding:60px 20px;text-align:center;">
+
+<h2>Oferta Especial</h2>
+
+<h1 style="font-size:40px;">R$27</h1>
+
+<p>Acesso imediato</p>
+
+<a href="#" class="btn">
+COMPRAR AGORA
+</a>
+
+</section>
+
+<section style="padding:60px 20px;background:#fff;text-align:center;">
+
+<h2>Comentários</h2>
+
+<div id="comments"></div>
+
+<button onclick="loadMore()">Ver mais</button>
+
+</section>
+
 <script>
 
-/* CONTADOR DE PESSOAS NA PÁGINA */
+/* CONTADOR */
 
 setInterval(()=>{
-
-let el=document.getElementById("viewers")
-if(!el) return
-
-let num=parseInt(el.innerText)
-let change=Math.floor(Math.random()*6)-2
-
-num=num+change
-
-if(num<32) num=32
-if(num>95) num=95
-
-el.innerText=num
-
-},4000)
-
-
-/* CONTADOR DE VAGAS */
-
-setInterval(()=>{
-
 let el=document.getElementById("spots")
 let num=parseInt(el.innerText)
-
-if(num>5){
-num--
-}
-
+if(num>5){num--}
 el.innerText=num
-
 },20000)
 
-
-/* POPUP DE COMPRA (FITNESS) */
-
-const buyers=[
-"Juliana - SP",
-"Amanda - RJ",
-"Fernanda - MG",
-"Camila - PR",
-"Bruna - SC",
-"Larissa - BA",
-"Vanessa - GO",
-"Patrícia - RS",
-"Aline - DF",
-"Renata - PE"
-]
-
-const popup=document.createElement("div")
-
-popup.style.position="fixed"
-popup.style.bottom="120px"
-popup.style.left="20px"
-popup.style.background="#111827"
-popup.style.color="white"
-popup.style.padding="12px 16px"
-popup.style.borderRadius="12px"
-popup.style.boxShadow="0 8px 20px rgba(0,0,0,0.4)"
-popup.style.fontSize="14px"
-popup.style.display="none"
-popup.style.zIndex="9999"
-
-document.body.appendChild(popup)
+/* POPUP */
 
 setInterval(()=>{
+alert("🔥 Alguém acabou de começar o treino!")
+},30000)
 
-let name=buyers[Math.floor(Math.random()*buyers.length)]
+/* COMENTÁRIOS */
 
-popup.innerHTML="🔥 <strong>"+name+"</strong> começou o treino agora"
-
-popup.style.display="block"
-
-setTimeout(()=>{
-popup.style.display="none"
-},4000)
-
-},12000)
-
-
-/* COMENTÁRIOS FITNESS */
-
-const commentsData=[
-
-{
-name:"Camila Rodrigues",
-avatar:"https://randomuser.me/api/portraits/women/12.jpg",
-text:"Gente, em 1 semana já senti meu bumbum mais duro 😳",
-time:"5 min",
-likes:52,
-replies:[]
-},
-
-{
-name:"Juliana Alves",
-avatar:"https://randomuser.me/api/portraits/women/33.jpg",
-text:"Eu achava que era só mais um treino… mas esse ativa MUITO o glúteo",
-time:"8 min",
-likes:41,
-replies:[]
-},
-
-{
-name:"Patrícia Gomes",
-avatar:"https://randomuser.me/api/portraits/women/22.jpg",
-text:"Treino em casa e mesmo assim já vi diferença na barriga",
-time:"12 min",
-likes:39,
-replies:[]
-},
-
-{
-name:"Renata Souza",
-avatar:"https://randomuser.me/api/portraits/women/45.jpg",
-text:"Melhor parte é que demora tipo 15 minutos só",
-time:"15 min",
-likes:28,
-replies:[]
-},
-
-{
-name:"Vanessa Costa",
-avatar:"https://randomuser.me/api/portraits/women/60.jpg",
-text:"Meu erro era treinar errado… aqui explica certinho",
-time:"21 min",
-likes:36,
-replies:[]
-}
-
+let data=[
+"Já senti diferença no bumbum",
+"Treino rápido e funciona",
+"Gostei muito",
+"Vale a pena"
 ]
 
+let visible=2
 
-/* GERAR MAIS COMENTÁRIOS */
-
-const names=["Aline","Fernanda","Luciana","Tatiane","Paula","Gabriela","Renata","Bianca"]
-
-const texts=[
-"Funciona mesmo pra quem nunca treinou?",
-"Dá pra fazer sem academia?",
-"Meu problema é barriga… será que ajuda?",
-"Precisa de peso ou só corpo?",
-"Vi no Instagram e vim ver se é bom",
-"Parece fácil de seguir"
-]
-
-for(let i=0;i<70;i++){
-
-commentsData.push({
-name:names[Math.floor(Math.random()*names.length)]+" "+["Silva","Souza","Costa"][Math.floor(Math.random()*3)],
-avatar:"https://randomuser.me/api/portraits/women/"+Math.floor(Math.random()*90)+".jpg",
-text:texts[Math.floor(Math.random()*texts.length)],
-time:Math.floor(Math.random()*59)+" min",
-likes:Math.floor(Math.random()*30),
-replies:[]
-})
-
+function render(){
+let html=""
+for(let i=0;i<visible;i++){
+html+="<p>"+data[i%data.length]+"</p>"
+}
+document.getElementById("comments").innerHTML=html
 }
 
-let visibleComments=5
-
-function renderComments(){
-
-const container=document.getElementById("comments-container")
-if(!container) return
-
-container.innerHTML=""
-
-commentsData.slice(0,visibleComments).forEach(c=>{
-
-container.innerHTML+=`
-
-<div style="margin-bottom:15px;">
-
-<img src="${c.avatar}" width="35" style="border-radius:50%;vertical-align:top">
-
-<div style="display:inline-block;background:#f0f2f5;padding:10px 14px;border-radius:18px;max-width:80%;">
-
-<strong>${c.name}</strong>
-<div>${c.text}</div>
-
-</div>
-
-<div style="font-size:12px;color:#65676b;margin-left:45px;">
-Curtir · Responder · ${c.time} · ❤️ ${c.likes}
-</div>
-
-</div>
-
-`
-
-})
-
+function loadMore(){
+visible+=2
+render()
 }
 
-document.getElementById("loadMoreBtn").onclick=function(){
-visibleComments+=5
-renderComments()
-}
-
-renderComments()
+render()
 
 </script>
+
+</body>
+</html>
