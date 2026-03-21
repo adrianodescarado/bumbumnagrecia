@@ -1,119 +1,26 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Shape & Bumbum</title>
-
-<script src="https://cdn.tailwindcss.com"></script>
-
-<style>
-
-:root{
---primary-green:#2d5a27;
---accent-yellow:#f4b400;
---bg-cream:#f9f7f2;
-}
-
-.btn-cta{
-background:var(--accent-yellow);
-color:#000;
-font-weight:bold;
-border-radius:8px;
-transition:.3s;
-}
-
-.btn-cta:hover{
-transform:scale(1.05);
-background:#e0a300;
-}
-
-@keyframes pulseCTA{
-0%{transform:scale(1);}
-50%{transform:scale(1.07);}
-100%{transform:scale(1);}
-}
-
-.btn-cta{
-animation:pulseCTA 1.8s infinite;
-}
-
-body{
-font-family:'Inter',sans-serif;
-background:var(--bg-cream);
-padding-top:60px;
-font-size:18px;
-line-height:1.7;
-}
-</style>
-
-</head>
-
-<body>
-
-<!-- BARRA -->
-
-<div id="urgencyBar"
-style="position:fixed;top:0;left:0;width:100%;background:#ff3b30;color:white;text-align:center;padding:10px;font-weight:bold;z-index:9999;">
-
-🔥 <span id="buyersCount">1.247</span> mulheres acessaram esse método • Restam <span id="spots">23</span> vagas!
-
-</div>
-
-<!-- HEADER -->
-
-<section class="text-white py-7 px-6" style="background:#111827;">
-<div class="max-w-6xl mx-auto flex justify-center py-6">
-<header class="bg-gray-900 py-3">
-<div class="flex justify-center">
-<img src="images/logo.png" class="h-44">
-</div>
-</header>
-</div>
-</section>
-
-<!-- HERO -->
-
-<section class="text-white py-2 px-6" style="background:#111827;">
-
-<div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
-
-<div class="md:w-1/2">
+<!-- HERO (ALTERADO APENAS TEXTO) -->
 
 <h1 class="text-4xl md:text-5xl font-extrabold mb-4 leading-tight">
-<span class="text-yellow-300">ATENÇÃO:</span> Seu bumbum não cresce e o seu shape não muda mesmo você tentando?
+<span class="text-yellow-300">ATENÇÃO:</span> Seu bumbum não cresce e seu corpo não muda mesmo você tentando?
 </h1>
 
 <p class="text-xl text-gray-300 mb-6">
-Treina, faz dieta… mas continua com o corpo mole, sem definição e sem resultado visível.
+Você treina, tenta melhorar a alimentação… mas continua com o corpo mole, sem definição e sem resultado visível.
 </p>
 
 <p class="text-lg mb-10">
-Existe um método simples que ativa o crescimento do bumbum e define o corpo usando técnicas específicas.
+Existe um jeito simples de ativar o crescimento do bumbum e transformar o shape com técnicas específicas.
 </p>
 
-<a href="#" class="btn-cta px-10 py-4 text-xl inline-block">
+<a href="https://pay.hotmart.com/M104685504C?checkoutMode=10" class="btn-cta px-10 py-4 text-xl inline-block">
 SIM, EU QUERO TRANSFORMAR MEU CORPO
 </a>
 
-</div>
+<p class="text-gray-300 mt-3 text-sm">
+Ou assista ao vídeo logo abaixo para entender como funciona 👇
+</p>
 
-<div class="md:w-1/2 flex justify-center mt-10 md:mt-0">
-<img src="images/mulher20.jpg" class="rounded-lg shadow-2xl w-[400px]">
-</div>
-
-</section>
-
-<!-- HISTÓRIA JULIANA -->
-
-<section class="py-20 px-6 bg-[#f6f2ea]">
-
-<div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
-
-<div>
+<!-- HISTÓRIA (ANTES ROMILDA → AGORA JULIANA) -->
 
 <p class="uppercase tracking-widest text-sm text-gray-500 mb-2">
 A HISTÓRIA DE JULIANA
@@ -124,210 +31,293 @@ Quando nada dava resultado
 </h2>
 
 <p class="mb-4">
-<strong>Juliana Ferreira, 29 anos</strong>, já tinha tentado de tudo.
+<strong>Juliana Ferreira, 29 anos</strong>, treinava e tentava cuidar da alimentação.
 </p>
 
 <p class="mb-4">
-Academia, dieta, vídeos na internet… mas o corpo não mudava.
+Mesmo se esforçando, o corpo não respondia. O bumbum não crescia e o shape continuava sem definição.
 </p>
 
 <p class="mb-6">
-O bumbum não crescia, a barriga não secava… e a frustração só aumentava.
+Ela via outras mulheres tendo resultado e não entendia o que estava fazendo de errado.
 </p>
 
 <div class="border-l-4 border-orange-400 pl-4 italic text-gray-700 mb-8">
-“Eu fazia tudo certo… mas parecia que meu corpo não respondia.”
+“Eu fazia tudo certo… mas parecia que meu corpo não mudava.”
 <br>
-<span class="text-sm text-gray-500">-- Juliana Ferreira</span>
+<span class="text-sm not-italic text-gray-500">-- Juliana Ferreira</span>
 </div>
 
-</div>
-
-<div class="flex justify-center">
-<div class="bg-white p-6 rounded-2xl shadow-lg">
-<img src="images/romilda.webp" class="rounded-xl">
-</div>
-</div>
-
-</div>
-
-</section>
-
-<!-- CONTINUAÇÃO -->
-
-<section class="py-20 px-6 bg-white">
-
-<div class="max-w-3xl mx-auto text-center">
-
-<h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-Assista e descubra como ativar o crescimento do seu bumbum
-</h2>
-
-<p class="text-gray-600 mb-8">
-Veja o método que mulheres estão usando para transformar o corpo
-</p>
-
-<div id="videoBox" class="cursor-pointer relative">
-
-<img src="images/thumb-video.jpg" class="w-full rounded-xl shadow-xl">
-
-<div class="absolute inset-0 flex items-center justify-center">
-<div class="bg-white/90 p-4 rounded-full shadow-lg">
-▶
-</div>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<!-- PROBLEMAS -->
-
-<section class="py-20 px-6 bg-[#f6f2ea]">
-
-<div class="max-w-6xl mx-auto">
+<!-- PROBLEMAS (ANTES CASA → AGORA SHAPE) -->
 
 <h3 class="text-3xl font-serif mb-8">
-Os problemas que travavam o resultado
+Cada tentativa parecia não dar resultado
 </h3>
 
 <div class="grid md:grid-cols-2 gap-6">
 
 <div class="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
-<span>🔥</span>
+<span class="text-red-500 text-xl">🔥</span>
 <p>Treinar e não ver crescimento no bumbum</p>
 </div>
 
 <div class="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
-<span>💨</span>
-<p>Corpo mole mesmo indo na academia</p>
+<span class="text-red-500 text-xl">💨</span>
+<p>Corpo mole mesmo frequentando academia</p>
 </div>
 
 <div class="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
-<span>🍽️</span>
-<p>Dieta que não gera resultado visível</p>
+<span class="text-red-500 text-xl">🍽️</span>
+<p>Dieta que não gera definição no corpo</p>
 </div>
 
 <div class="bg-white p-5 rounded-xl shadow-sm flex items-center gap-4">
-<span>🔥</span>
-<p>Falta de definição no corpo</p>
+<span class="text-red-500 text-xl">🔥</span>
+<p>Falta de resultado mesmo se esforçando</p>
 </div>
 
 </div>
 
 <p class="mt-8 text-gray-700">
-Juliana se sentia travada.  
-<strong>Ela precisava de algo que realmente funcionasse.</strong>
+Juliana se sentia frustrada e sem direção.
+<strong>Ela precisava de algo simples que realmente funcionasse.</strong>
 </p>
 
+<div class="border-l-4 border-orange-400 pl-4 italic text-gray-700 mt-6">
+“Eu não sabia mais o que mudar… nada parecia dar resultado.”
+<br>
+<span class="text-sm not-italic text-gray-500">-- Juliana Ferreira</span>
 </div>
-
-</section>
 
 <!-- VIRADA -->
 
-<section class="py-20 px-6 bg-[#00CEC8]">
-
-<div class="max-w-4xl mx-auto">
-
-<h2 class="text-5xl font-serif mb-8 text-gray-900">
-A virada
-</h2>
+<p class="text-lg text-gray-700 mb-6">
+Um dia, sem muita esperança, Juliana descobriu um método focado em ativação correta do bumbum.
+</p>
 
 <p class="text-lg text-gray-700 mb-6">
-Até que ela descobriu um método focado em ativação muscular correta.
+Ela pensou: "Será que agora vai funcionar de verdade?"
 </p>
 
 <p class="text-lg text-gray-800 mb-10">
-<strong>Movimentos certos, sequência certa e execução correta.</strong>
+E foi exatamente isso que aconteceu. 
+<strong>O método era direto, com movimentos simples e sequência correta para ativar o músculo certo.</strong>
 </p>
 
 <div class="border-l-4 border-green-700 pl-5 italic text-gray-700">
-“Foi a primeira vez que eu senti o bumbum trabalhando de verdade.”
+"Pela primeira vez, eu senti o bumbum trabalhar de verdade."
 <br><br>
-<span class="text-sm text-gray-500">-- Juliana Ferreira</span>
+<span class="text-sm not-italic text-gray-500">-- Juliana Ferreira</span>
 </div>
-
-</div>
-
-</section>
 
 <!-- RESULTADO -->
 
-<section class="py-24 px-6 bg-[#f6f2ea]">
-
-<div class="max-w-5xl mx-auto">
-
-<div class="grid md:grid-cols-2 gap-12 items-center">
-
-<div class="flex justify-center">
-<img src="images/capa-ebook.png" class="rounded-xl shadow-xl w-[260px]">
-</div>
-
-<div>
-
 <h2 class="text-3xl font-serif text-gray-900 mb-4">
-Hoje, Juliana vê resultado
+Hoje, Juliana vê resultado no espelho
 </h2>
 
-<p class="text-gray-700 mb-4">
+<p class="text-gray-700 mb-4 leading-relaxed">
 O bumbum começou a crescer, o corpo ficou mais firme e definido.
 </p>
 
-<p class="text-gray-700 mb-4">
-Agora ela sabe exatamente o que fazer.
+<p class="text-gray-700 mb-4 leading-relaxed">
+Ela não se sente mais perdida — agora sabe exatamente o que fazer.
 </p>
 
 <p class="italic text-gray-600">
 “Hoje eu olho no espelho e vejo resultado de verdade.”
 </p>
 
-</div>
+<!-- BENEFÍCIOS (AJUSTADOS) -->
 
-</div>
-
-</div>
-
-</section>
+<p>Mais firmeza e definição no corpo</p>
+<p>Bumbum mais ativado e desenvolvido</p>
+<p>Resultados visíveis mais rápidos</p>
+<p>Mais confiança com o próprio corpo</p>
+<p>Treinos mais eficientes</p>
+<p>Menos frustração com falta de resultado</p>
 
 <!-- CTA FINAL -->
 
-<section class="py-20 px-6">
-
-<div class="max-w-4xl mx-auto text-center">
-
-<div class="bg-green-700 text-white rounded-2xl p-12 shadow-2xl">
-
-<h2 class="text-5xl font-black mb-6">
-R$ 37,00
-</h2>
-
-<p class="text-xl mb-12">
-Acesso imediato
-</p>
-
-<a href="#" class="btn-cta px-12 py-5 text-2xl inline-block">
-QUERO MEU SHAPE AGORA
+<a href="https://pay.hotmart.com/M104685504C?checkoutMode=10" class="btn-cta px-10 py-5 text-xl mt-10 inline-block">
+EU QUERO TRANSFORMAR MEU CORPO
 </a>
 
-</div>
+const commentsData=[
 
-</div>
+{
+name:"Camila Rodrigues",
+avatar:"https://randomuser.me/api/portraits/women/12.jpg",
+text:"Eu treinava direto e meu bumbum não mudava… achei que era genética. Depois que comecei a aplicar isso aqui, senti diferença real.",
+time:"5 min",
+likes:42,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Isso acontece muito mesmo Camila 🙏 o erro geralmente está na ativação.",
+time:"2 min"
+}
+]
+},
 
-</section>
+{
+name:"Patrícia Gomes",
+avatar:"https://randomuser.me/api/portraits/women/22.jpg",
+text:"Comprei achando que era mais um treino qualquer… mas é diferente. Você sente o bumbum trabalhar na hora.",
+time:"8 min",
+likes:36,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Exatamente Patrícia 😍 a execução muda tudo!",
+time:"6 min"
+}
+]
+},
 
-<script>
+{
+name:"Juliana Alves",
+avatar:"https://randomuser.me/api/portraits/women/33.jpg",
+text:"Eu já fazia academia há meses e nada… depois que entendi isso aqui, comecei a ver resultado.",
+time:"12 min",
+likes:51,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Fico feliz demais em saber disso 🙌",
+time:"10 min"
+}
+]
+},
 
-setInterval(()=>{
-let el=document.getElementById("spots")
-let num=parseInt(el.innerText)
-if(num>7){num--}
-el.innerText=num
-},25000)
+{
+name:"Renata Souza",
+avatar:"https://randomuser.me/api/portraits/women/45.jpg",
+text:"Sério, eu achava que tava treinando certo… mas não tava ativando nada. Isso aqui abriu minha mente.",
+time:"15 min",
+likes:28,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Isso é mais comum do que parece 😅",
+time:"13 min"
+}
+]
+},
 
-</script>
+{
+name:"Fernanda Lima",
+avatar:"https://randomuser.me/api/portraits/women/54.jpg",
+text:"Só a parte da ativação já mudou tudo pra mim… senti o bumbum pegar de verdade pela primeira vez.",
+time:"18 min",
+likes:47,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Perfeito Fernanda 👏 esse é o ponto!",
+time:"15 min"
+}
+]
+},
 
-</body>
-</html>
+{
+name:"Vanessa Costa",
+avatar:"https://randomuser.me/api/portraits/women/60.jpg",
+text:"Eu achei que era mais uma promessa… mas resolvi testar. Me surpreendeu mesmo.",
+time:"21 min",
+likes:39,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Que bom que gostou Vanessa 🙏",
+time:"19 min"
+}
+]
+},
+
+{
+name:"Bianca Martins",
+avatar:"https://randomuser.me/api/portraits/women/25.jpg",
+text:"Já comprei treino caro e não funcionou… isso aqui é muito mais direto.",
+time:"25 min",
+likes:31,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Nosso foco é justamente simplificar 😊",
+time:"22 min"
+}
+]
+},
+
+{
+name:"Claudia Pereira",
+avatar:"https://randomuser.me/api/portraits/women/70.jpg",
+text:"Muito fácil de entender… você faz e já sente na hora.",
+time:"28 min",
+likes:26,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Exatamente 👏 prática imediata!",
+time:"26 min"
+}
+]
+},
+
+{
+name:"Aline Batista",
+avatar:"https://randomuser.me/api/portraits/women/37.jpg",
+text:"Meu erro era treinar sem ativar… depois disso aqui mudou totalmente.",
+time:"32 min",
+likes:44,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Você entendeu o principal 😄",
+time:"30 min"
+}
+]
+},
+
+{
+name:"Tatiane Oliveira",
+avatar:"https://randomuser.me/api/portraits/women/41.jpg",
+text:"Melhor coisa que fiz foi testar isso… agora faz sentido porque antes não dava resultado.",
+time:"35 min",
+likes:21,
+replies:[
+{
+name:"Oficial",
+avatar:"https://randomuser.me/api/portraits/women/90.jpg",
+text:"Agora sim 🙌",
+time:"33 min"
+}
+]
+}
+
+];
+
+
+const texts=[
+
+"Estou vendo os comentários antes de decidir.",
+"Isso funciona mesmo para quem já treina?",
+"Meu bumbum não desenvolve de jeito nenhum.",
+"Já tentei de tudo na academia.",
+"Se realmente ativar o músculo já ajuda muito.",
+"Vi no Instagram e vim pesquisar.",
+"Preciso de algo que funcione de verdade.",
+"Se for simples assim, vale a pena."
+
+]
+
